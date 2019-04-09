@@ -49,7 +49,7 @@ def write_output_image(image, in_filename):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', '-i', help='Input directory', required=True)
-    parser.add_argument('--max-size', '-s', help='Maximum image dimension (px; default 1200)')
+    parser.add_argument('--max-size', '-s', help='Maximum image dimension (px; default 1200)', type=int)
 
     args = parser.parse_args()
     input_dir = args.input + ("/" if args.input[-1] else "")
